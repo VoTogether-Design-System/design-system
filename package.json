@@ -1,6 +1,6 @@
 {
   "name": "votogether-design-system",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.umd.cjs",

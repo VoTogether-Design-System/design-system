@@ -10,18 +10,26 @@ interface RoundButtonProps
     PropsWithChildren {
   size?: Size;
   style?: CSSProperties;
+  isAutoResize?: boolean;
 }
 
 export default function RoundButton({
   size = 'sm',
   style,
+  isAutoResize = false,
   children,
   ...rest
 }: RoundButtonProps) {
   return (
     <>
       <GlobalStyle />
-      <S.Button style={style} size={size} aria-label="더하기" {...rest}>
+      <S.Button
+        style={style}
+        size={size}
+        isAutoResize={isAutoResize}
+        aria-label="더하기"
+        {...rest}
+      >
         {children}
       </S.Button>
     </>

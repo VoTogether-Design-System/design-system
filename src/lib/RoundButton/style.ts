@@ -4,11 +4,12 @@ import { theme } from '../style/theme';
 
 interface ButtonProps {
   size: Size;
+  isAutoResize: boolean;
 }
 
 const SIZE = {
-  sm: { button: '25px' },
-  md: { button: '40px' },
+  sm: { button: '30px' },
+  md: { button: '45px' },
   lg: { button: '60px' },
 };
 
@@ -27,12 +28,16 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
 
   @media (min-width: ${theme.breakpoint.md}) {
-    width: ${(props) => `calc(${SIZE[props.size].button} * 1.2)`};
-    height: ${(props) => `calc(${SIZE[props.size].button} * 1.2)`};
+    width: ${({ size, isAutoResize }) =>
+      isAutoResize && `calc(${SIZE[size].button} * 1.1)`};
+    height: ${({ size, isAutoResize }) =>
+      isAutoResize && `calc(${SIZE[size].button} * 1.1)`};
   }
 
   @media (min-width: ${theme.breakpoint.lg}) {
-    width: ${(props) => `calc(${SIZE[props.size].button} * 1.4)`};
-    height: ${(props) => `calc(${SIZE[props.size].button} * 1.4)`};
+    width: ${({ size, isAutoResize }) =>
+      isAutoResize && `calc(${SIZE[size].button} * 1.2)`};
+    height: ${({ size, isAutoResize }) =>
+      isAutoResize && `calc(${SIZE[size].button} * 1.2)`};
   }
 `;

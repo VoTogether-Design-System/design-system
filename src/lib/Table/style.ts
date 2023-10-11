@@ -24,16 +24,6 @@ export const Table = styled.table`
 
 export const Tbody = styled.tbody`
   width: 200px;
-
-  & > :nth-child(11) {
-    margin-top: 20px;
-    padding: 3px 0;
-    border-radius: 4px;
-
-    background-color: var(--white);
-
-    font-weight: 600;
-  }
 `;
 
 export const THead = styled.thead`
@@ -50,7 +40,7 @@ export const Tr = styled.tr<{ $childLength: number }>`
   padding: 0 15px;
 
   &:hover {
-    background-color: #deeef6;
+    background-color: #eeeeee;
   }
 `;
 

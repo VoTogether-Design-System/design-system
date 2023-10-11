@@ -1,7 +1,7 @@
 {
   "name": "votogether-design-system",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.7",
   "type": "module",
   "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
@@ -25,7 +25,7 @@
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
-    "prepatch": "rm -rf dist && mkdir dist && npm run build",
+    "prepatch": "npm run build",
     "preminor": "rm -rf dist && mkdir dist && npm run build",
     "premajor": "rm -rf dist && mkdir dist && npm run build"
   },

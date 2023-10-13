@@ -34,16 +34,6 @@ export const Default: Story = {
   ),
 };
 
-export const WithColumnTemplate: Story = {
-  render: () => (
-    <Table<Member>
-      columns={MEMBER_LIST_MANY_COLUMNS}
-      rows={MEMBER_LIST_MANY_COLUMNS_LIST}
-      columnTemplate='1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr'
-    />
-  ),
-};
-
 export const Dense: Story = {
   render: () => (
     <Table<Member> columns={MEMBER_LIST_COLUMN} rows={MEMBER_LIST} dense />

@@ -1098,6 +1098,7 @@ export declare const THead: import("styled-components").IStyledComponent<"web", 
     onTransitionEndCapture?: import("react").TransitionEventHandler<HTMLTableSectionElement> | undefined;
 }>;
 export declare const Tr: import("styled-components").IStyledComponent<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLTableRowElement>, HTMLTableRowElement>, {
+    $columnTemplate?: string | undefined;
     $childLength: number;
 }>>;
 export declare const Th: import("styled-components").IStyledComponent<"web", {

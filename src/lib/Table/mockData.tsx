@@ -130,7 +130,7 @@ export const MEMBER_LIST_MANY_COLUMNS_LIST: Member[] = [
   },
   {
     id: 15,
-    name: 'Very Long Long Long Long Long Name',
+    name: 'Nero',
     age: 27,
     gender: 'FEMALE',
     level: 'gold',

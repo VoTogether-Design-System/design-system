@@ -4,18 +4,20 @@ interface TableProps<T> {
   columns: string[];
   rows: T;
   dense?: boolean;
+  columnTemplate?: string;
 }
 
 export default function Table<T extends object>({
   columns,
   rows,
   dense = false,
+  columnTemplate,
 }: TableProps<T[]>) {
   return (
     <S.Wrapper>
       <S.Table>
         <S.THead>
-          <S.Tr $childLength={columns.length}>
+          <S.Tr $columnTemplate={columnTemplate} $childLength={columns.length}>
             {columns.map((column) => (
               <S.Th>{column}</S.Th>
             ))}
@@ -27,7 +29,11 @@ export default function Table<T extends object>({
           ) : (
             <>
               {rows.map((row, index) => (
-                <S.Tr key={index} $childLength={columns.length}>
+                <S.Tr
+                  key={index}
+                  $columnTemplate={columnTemplate}
+                  $childLength={columns.length}
+                >
                   {Object.entries(row).map(([key, value], index) => (
                     <S.Td key={`${key}${index}`} $dense={dense}>
                       {value}

@@ -4,10 +4,10 @@ import { theme } from '../style/theme';
 interface WrapperProps {
   breakpoint: number;
   gap: string;
-  smmargin: string;
-  smpadding: string;
-  lgmargin: string;
-  lgpadding: string;
+  $smMargin: string;
+  $smPadding: string;
+  $lgMargin: string;
+  $lgPadding: string;
 }
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -19,13 +19,13 @@ export const Wrapper = styled.div<WrapperProps>`
   width: 100%;
   height: 100%;
 
-  margin: ${({ smmargin }) => smmargin};
-  padding: ${({ smpadding }) => smpadding};
+  margin: ${({ $smMargin }) => $smMargin};
+  padding: ${({ $smPadding }) => $smPadding};
 
   @media (min-width: ${theme.breakpoint.sm}) {
     flex-direction: row;
-    margin: ${({ lgmargin }) => lgmargin};
-    padding: ${({ lgpadding }) => lgpadding};
+    margin: ${({ $lgMargin }) => $lgMargin};
+    padding: ${({ $lgPadding }) => $lgPadding};
   }
 `;
 

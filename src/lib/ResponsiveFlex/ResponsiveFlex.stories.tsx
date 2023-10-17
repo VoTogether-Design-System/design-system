@@ -62,7 +62,7 @@ export const LargeMarginTwentyPixel: Story = {
     <ResponsiveFlex
       breakpoint={theme.breakpoint.sm}
       ratio={70}
-      lgmargin={'20px'}
+      $lgMargin={'20px'}
     >
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
@@ -75,7 +75,7 @@ export const LargePaddingTwentyPixel: Story = {
     <ResponsiveFlex
       breakpoint={theme.breakpoint.sm}
       ratio={70}
-      lgpadding={'20px'}
+      $lgPadding={'20px'}
     >
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
@@ -88,7 +88,7 @@ export const SmallMarginTwentyPixel: Story = {
     <ResponsiveFlex
       breakpoint={theme.breakpoint.sm}
       ratio={70}
-      smmargin={'20px'}
+      $smMargin={'20px'}
     >
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
@@ -101,7 +101,7 @@ export const SmallPaddingTwentyPixel: Story = {
     <ResponsiveFlex
       breakpoint={theme.breakpoint.sm}
       ratio={70}
-      smpadding={'20px'}
+      $smPadding={'20px'}
     >
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>

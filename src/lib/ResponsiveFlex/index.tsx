@@ -23,19 +23,19 @@ interface ResponsiveFlexProps extends PropsWithChildren {
   /**
    * margin of Flex when width is less than breakpoint
    */
-  smmargin?: StringPixel;
+  $smMargin?: StringPixel;
   /**
    * padding of Flex when width is less than breakpoint
    */
-  smpadding?: StringPixel;
+  $smPadding?: StringPixel;
   /**
    * margin of Flex when width is no less than breakpoint
    */
-  lgmargin?: StringPixel;
+  $lgMargin?: StringPixel;
   /**
    * padding of Flex when width is no less than breakpoint
    */
-  lgpadding?: StringPixel;
+  $lgPadding?: StringPixel;
   /**
    * children of Flex, The number of children should be 2
    */
@@ -46,10 +46,10 @@ export default function ResponsiveFlex({
   breakpoint = theme.breakpoint.sm,
   gap = '10px',
   ratio = 50,
-  smmargin = '10px',
-  smpadding = '10px',
-  lgmargin = '10px',
-  lgpadding = '10px',
+  $smMargin = '10px',
+  $smPadding = '10px',
+  $lgMargin = '10px',
+  $lgPadding = '10px',
   children,
 }: ResponsiveFlexProps) {
   if (children.length !== 2)
@@ -59,10 +59,10 @@ export default function ResponsiveFlex({
     <S.Wrapper
       breakpoint={breakpoint}
       gap={gap}
-      smmargin={smmargin}
-      smpadding={smpadding}
-      lgmargin={lgmargin}
-      lgpadding={lgpadding}
+      $smMargin={$smMargin}
+      $smPadding={$smPadding}
+      $lgMargin={$lgMargin}
+      $lgPadding={$lgPadding}
     >
       <S.FirstBox ratio={ratio}>{children[0]}</S.FirstBox>
       <S.SecondBox ratio={100 - ratio}>{children[1]}</S.SecondBox>

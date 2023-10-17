@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react';
 
 import { theme } from '../style/theme';
-import { StringPixel } from '../types';
+import { MarginPadding, StringPixel } from '../types';
 
 import * as S from './style';
 
@@ -9,11 +9,15 @@ interface ResponsiveFlexProps extends PropsWithChildren {
   /**
    * breakpoint that arranges children from horizontal to vertical (min-width: breakpoint)
    */
-  breakpoint: number;
+  breakpoint: StringPixel;
   /**
-   * gap between two children
+   * gap between two children when width is less than breakpoint
    */
-  gap?: StringPixel;
+  $smGap?: StringPixel;
+  /**
+   * gap between two children when width is no less than breakpoint
+   */
+  $lgGap?: StringPixel;
   /**
    * ratio of left-sided child(first index of children)
    * unit is percent (ex. 40%)
@@ -23,19 +27,27 @@ interface ResponsiveFlexProps extends PropsWithChildren {
   /**
    * margin of Flex when width is less than breakpoint
    */
-  $smMargin?: StringPixel;
+  $smMargin?: MarginPadding;
   /**
    * padding of Flex when width is less than breakpoint
    */
-  $smPadding?: StringPixel;
+  $smPadding?: MarginPadding;
   /**
    * margin of Flex when width is no less than breakpoint
    */
-  $lgMargin?: StringPixel;
+  $lgMargin?: MarginPadding;
   /**
    * padding of Flex when width is no less than breakpoint
    */
-  $lgPadding?: StringPixel;
+  $lgPadding?: MarginPadding;
+  /**
+   * justify-content of Flex
+   */
+  $justifyContent?: string;
+  /**
+   * align-items of Flex
+   */
+  $alignItems?: string;
   /**
    * children of Flex, The number of children should be 2
    */
@@ -44,12 +56,15 @@ interface ResponsiveFlexProps extends PropsWithChildren {
 
 export default function ResponsiveFlex({
   breakpoint = theme.breakpoint.sm,
-  gap = '10px',
+  $smGap = '10px',
+  $lgGap = '10px',
   ratio = 50,
   $smMargin = '10px',
   $smPadding = '10px',
   $lgMargin = '10px',
   $lgPadding = '10px',
+  $justifyContent = 'space-between',
+  $alignItems = 'center',
   children,
 }: ResponsiveFlexProps) {
   if (children.length !== 2)
@@ -58,14 +73,21 @@ export default function ResponsiveFlex({
   return (
     <S.Wrapper
       breakpoint={breakpoint}
-      gap={gap}
+      $smGap={$smGap}
+      $lgGap={$lgGap}
       $smMargin={$smMargin}
       $smPadding={$smPadding}
       $lgMargin={$lgMargin}
       $lgPadding={$lgPadding}
+      $justifyContent={$justifyContent}
+      $alignItems={$alignItems}
     >
-      <S.FirstBox ratio={ratio}>{children[0]}</S.FirstBox>
-      <S.SecondBox ratio={100 - ratio}>{children[1]}</S.SecondBox>
+      <S.FirstBox breakpoint={breakpoint} ratio={ratio}>
+        {children[0]}
+      </S.FirstBox>
+      <S.SecondBox breakpoint={breakpoint} ratio={100 - ratio}>
+        {children[1]}
+      </S.SecondBox>
     </S.Wrapper>
   );
 }

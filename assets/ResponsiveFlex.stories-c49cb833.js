@@ -12,9 +12,8 @@ import{s,a as n,j as i}from"./styled-components.browser.esm-a0a1784b.js";import{
   margin: ${({$smMargin:e})=>e};
   padding: ${({$smPadding:e})=>e};
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   @media (min-width: ${({breakpoint:e})=>e}) {
     flex-direction: row;
@@ -22,6 +21,8 @@ import{s,a as n,j as i}from"./styled-components.browser.esm-a0a1784b.js";import{
 
     margin: ${({$lgMargin:e})=>e};
     padding: ${({$lgPadding:e})=>e};
+
+    overflow-y: auto;
   }
 `,J=s.div`
   width: 100%;
@@ -55,22 +56,22 @@ unit is percent (ex. 40%)
   padding: 10px;
 
   background-color: #d5c8ae;
-`,d={render:()=>i(r,{breakpoint:o.breakpoint.sm,children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},p={render:()=>i(r,{breakpoint:o.breakpoint.md,children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},l={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},c={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$lgMargin:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},x={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$lgPadding:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},m={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$smMargin:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},h={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$smPadding:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})};var B,F,b;d.parameters={...d.parameters,docs:{...(B=d.parameters)==null?void 0:B.docs,source:{originalSource:`{
+`,d={render:()=>i(r,{breakpoint:o.breakpoint.sm,children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},l={render:()=>i(r,{breakpoint:o.breakpoint.md,children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},p={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},c={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$lgMargin:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},x={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$lgPadding:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},m={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$smMargin:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})},h={render:()=>i(r,{breakpoint:o.breakpoint.sm,ratio:70,$smPadding:"20px",children:[n(a,{children:"FirstBox"}),n(t,{children:"SecondBox"})]})};var B,F,b;d.parameters={...d.parameters,docs:{...(B=d.parameters)==null?void 0:B.docs,source:{originalSource:`{
   render: () => <ResponsiveFlex breakpoint={theme.breakpoint.sm}>
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
     </ResponsiveFlex>
-}`,...(b=(F=d.parameters)==null?void 0:F.docs)==null?void 0:b.source}}};var f,$,k;p.parameters={...p.parameters,docs:{...(f=p.parameters)==null?void 0:f.docs,source:{originalSource:`{
+}`,...(b=(F=d.parameters)==null?void 0:F.docs)==null?void 0:b.source}}};var f,$,S;l.parameters={...l.parameters,docs:{...(f=l.parameters)==null?void 0:f.docs,source:{originalSource:`{
   render: () => <ResponsiveFlex breakpoint={theme.breakpoint.md}>
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
     </ResponsiveFlex>
-}`,...(k=($=p.parameters)==null?void 0:$.docs)==null?void 0:k.source}}};var S,w,v;l.parameters={...l.parameters,docs:{...(S=l.parameters)==null?void 0:S.docs,source:{originalSource:`{
+}`,...(S=($=l.parameters)==null?void 0:$.docs)==null?void 0:S.source}}};var k,v,w;p.parameters={...p.parameters,docs:{...(k=p.parameters)==null?void 0:k.docs,source:{originalSource:`{
   render: () => <ResponsiveFlex breakpoint={theme.breakpoint.sm} ratio={70}>
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
     </ResponsiveFlex>
-}`,...(v=(w=l.parameters)==null?void 0:w.docs)==null?void 0:v.source}}};var y,P,R;c.parameters={...c.parameters,docs:{...(y=c.parameters)==null?void 0:y.docs,source:{originalSource:`{
+}`,...(w=(v=p.parameters)==null?void 0:v.docs)==null?void 0:w.source}}};var y,P,R;c.parameters={...c.parameters,docs:{...(y=c.parameters)==null?void 0:y.docs,source:{originalSource:`{
   render: () => <ResponsiveFlex breakpoint={theme.breakpoint.sm} ratio={70} $lgMargin={'20px'}>
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
@@ -90,5 +91,5 @@ unit is percent (ex. 40%)
       <FirstBox>FirstBox</FirstBox>
       <SecondBox>SecondBox</SecondBox>
     </ResponsiveFlex>
-}`,...(N=(L=h.parameters)==null?void 0:L.docs)==null?void 0:N.source}}};const ee=["Default","BreakpointTablet","RatioForFirstBoxSeventy","LargeMarginTwentyPixel","LargePaddingTwentyPixel","SmallMarginTwentyPixel","SmallPaddingTwentyPixel"];export{p as BreakpointTablet,d as Default,c as LargeMarginTwentyPixel,x as LargePaddingTwentyPixel,l as RatioForFirstBoxSeventy,m as SmallMarginTwentyPixel,h as SmallPaddingTwentyPixel,ee as __namedExportsOrder,Z as default};
-//# sourceMappingURL=ResponsiveFlex.stories-172d264b.js.map
+}`,...(N=(L=h.parameters)==null?void 0:L.docs)==null?void 0:N.source}}};const ee=["Default","BreakpointTablet","RatioForFirstBoxSeventy","LargeMarginTwentyPixel","LargePaddingTwentyPixel","SmallMarginTwentyPixel","SmallPaddingTwentyPixel"];export{l as BreakpointTablet,d as Default,c as LargeMarginTwentyPixel,x as LargePaddingTwentyPixel,p as RatioForFirstBoxSeventy,m as SmallMarginTwentyPixel,h as SmallPaddingTwentyPixel,ee as __namedExportsOrder,Z as default};
+//# sourceMappingURL=ResponsiveFlex.stories-c49cb833.js.map

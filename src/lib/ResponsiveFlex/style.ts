@@ -27,9 +27,8 @@ export const Wrapper = styled.div<WrapperProps>`
   margin: ${({ $smMargin }) => $smMargin};
   padding: ${({ $smPadding }) => $smPadding};
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   @media (min-width: ${({ breakpoint }) => breakpoint}) {
     flex-direction: row;
@@ -37,6 +36,8 @@ export const Wrapper = styled.div<WrapperProps>`
 
     margin: ${({ $lgMargin }) => $lgMargin};
     padding: ${({ $lgPadding }) => $lgPadding};
+
+    overflow-y: auto;
   }
 `;
 

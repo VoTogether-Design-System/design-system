@@ -83,13 +83,13 @@ export default function SomeComponent() {
 [npm](https://www.npmjs.com/package/votogether-design-system)
 
 ## Contributors
-    <table>
+<table>
       <tr>
      <td align="center"><a href="https://github.com/inyeong-kang"><img src="https://avatars.githubusercontent.com/u/113416448?v=4" width="100px;" alt=""/><br /><sub><b>수아</b></sub></a><br /></td>
      <td align="center"><a href="https://github.com/inyeong-kang"><img src="https://avatars.githubusercontent.com/u/80146176?v=4" width="100px;" alt=""/><br /><sub><b>우스</b></sub></a><br /></td>
      <td align="center"><a href="https://github.com/inyeong-kang"><img src="https://avatars.githubusercontent.com/u//81199414?v=4" width="100px;" alt=""/><br /><sub><b>제로</b></sub></a><br /></td>
      </tr>
-   </table>
+</table>
 
 
 ## License

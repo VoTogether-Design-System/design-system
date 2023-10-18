@@ -7,6 +7,7 @@ import ResponsiveFlex from '.';
 
 const meta: Meta<typeof ResponsiveFlex> = {
   component: ResponsiveFlex,
+  tags: ['autodocs'],
 };
 
 export default meta;

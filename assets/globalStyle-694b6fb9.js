@@ -102,7 +102,8 @@ a{
     --primary-color: #F85554;
     --white: #ffffff;
     --slate: #94A3B8;
-    --gray: #F4F4F4;
+    --bright-gray: #F4F4F4;
+    --gray: #cccccc;
     --red: #F51A18;
     --dark-gray: #929292;
     --header: #1f1f1f;
@@ -119,4 +120,4 @@ a{
     --text-small: 400 1.2rem/1.8rem san-serif;
   }  
 `;export{o as G};
-//# sourceMappingURL=globalStyle-5f7d7f3d.js.map
+//# sourceMappingURL=globalStyle-694b6fb9.js.map
